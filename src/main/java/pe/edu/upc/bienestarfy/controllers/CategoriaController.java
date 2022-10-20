@@ -9,6 +9,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/categorias")
 public class CategoriaController {
+    //pruebacommit
     @Autowired
     private ICategoriaService cService;
 
