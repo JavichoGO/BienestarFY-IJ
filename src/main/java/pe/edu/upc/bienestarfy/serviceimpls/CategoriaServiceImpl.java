@@ -16,7 +16,14 @@ public class CategoriaServiceImpl implements ICategoriaService {
 
     @Override
     public void insert(Categoria categoria) { cR.save(categoria);}
-
     @Override
     public List<Categoria> list() {return cR.findAll();}
+    @Override
+    public void delete(int idCategoria) {
+        cR.deleteById(idCategoria);
+    }
+    @Override
+    public List<Categoria> search(String nombreCategoria) {
+        return cR.buscarNombre(nombreCategoria);
+    }
 }
