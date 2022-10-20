@@ -10,7 +10,7 @@ public class TipoHorario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTipoHorario;
 
-    @Column(name = "nameTipoHorario",length = 45,nullable = false)
+    @Column(name = "nombreTipoHorario",length = 45,nullable = false)
     private String nombreTipoHorario;
     @Column(name = "descripcionTipoHorario",length = 45,nullable = false)
     private String descripcionTipoHorario;

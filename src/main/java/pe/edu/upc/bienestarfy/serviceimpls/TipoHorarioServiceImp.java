@@ -2,6 +2,7 @@ package pe.edu.upc.bienestarfy.serviceimpls;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pe.edu.upc.bienestarfy.entities.TipoActividad;
 import pe.edu.upc.bienestarfy.entities.TipoHorario;
 import pe.edu.upc.bienestarfy.repositories.ITipoHorarioRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ITipoHorarioService;
@@ -19,5 +20,13 @@ public class TipoHorarioServiceImp implements ITipoHorarioService {
     @Override
     public List<TipoHorario> list() {
         return pR.findAll();
+    }
+    @Override
+    public void delete(int idTipoHorario) {
+        pR.deleteById(idTipoHorario);
+    }
+    @Override
+    public List<TipoHorario> search(String nombreTipoHorario) {
+        return pR.buscarNombre(nombreTipoHorario);
     }
 }
