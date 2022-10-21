@@ -1,6 +1,5 @@
 package pe.edu.upc.bienestarfy.serviceinterfaces;
 
-import pe.edu.upc.bienestarfy.entities.TipoActividad;
 import pe.edu.upc.bienestarfy.entities.TipoHorario;
 import java.util.List;
 

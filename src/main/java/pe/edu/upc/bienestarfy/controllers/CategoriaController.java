@@ -3,7 +3,6 @@ package pe.edu.upc.bienestarfy.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.bienestarfy.entities.Categoria;
-import pe.edu.upc.bienestarfy.entities.Role;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ICategoriaService;
 
 import java.util.List;
