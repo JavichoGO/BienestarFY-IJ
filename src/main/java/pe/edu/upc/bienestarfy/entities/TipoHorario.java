@@ -42,9 +42,9 @@ public class TipoHorario {
     public TipoHorario() {
     }
 
-    public TipoHorario(int idTipoHorario, String descripcionTipoHorario, String nombreTipoHorario) {
+    public TipoHorario(int idTipoHorario, String nombreTipoHorario, String descripcionTipoHorario) {
         this.idTipoHorario = idTipoHorario;
-        this.descripcionTipoHorario = descripcionTipoHorario;
         this.nombreTipoHorario = nombreTipoHorario;
+        this.descripcionTipoHorario = descripcionTipoHorario;
     }
 }

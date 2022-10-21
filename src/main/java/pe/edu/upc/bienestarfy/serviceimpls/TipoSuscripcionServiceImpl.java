@@ -15,8 +15,16 @@ public class TipoSuscripcionServiceImpl implements ITipoSuscripcionService {
     private ITipoSuscripcionRepository tsR;
 
     @Override
-    public void insert(TipoSuscripcion tiposuscripcion) { tsR.save(tiposuscripcion);}
+    public void Insert(TipoSuscripcion tiposuscripcion) { tsR.save(tiposuscripcion);}
 
     @Override
     public List<TipoSuscripcion> list() {return tsR.findAll();}
+    @Override
+    public void delete(int idTipoSuscripcion) {
+        tsR.deleteById(idTipoSuscripcion);
+    }
+    @Override
+    public List<TipoSuscripcion> search(String nombreTipoSuscripcion) {
+        return tsR.buscarNombre(nombreTipoSuscripcion);
+    }
 }
