@@ -2,6 +2,7 @@ package pe.edu.upc.bienestarfy.serviceimpls;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pe.edu.upc.bienestarfy.entities.TipoActividad;
 import pe.edu.upc.bienestarfy.entities.TipoHorario;
 import pe.edu.upc.bienestarfy.repositories.ITipoHorarioRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ITipoHorarioService;

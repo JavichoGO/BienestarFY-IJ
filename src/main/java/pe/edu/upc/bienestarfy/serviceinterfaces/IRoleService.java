@@ -1,5 +1,6 @@
 package pe.edu.upc.bienestarfy.serviceinterfaces;
 
+import pe.edu.upc.bienestarfy.entities.Categoria;
 import pe.edu.upc.bienestarfy.entities.Role;
 
 import java.util.List;

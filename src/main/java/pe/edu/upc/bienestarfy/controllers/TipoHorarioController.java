@@ -2,6 +2,7 @@ package pe.edu.upc.bienestarfy.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.bienestarfy.entities.TipoActividad;
 import pe.edu.upc.bienestarfy.entities.TipoHorario;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ITipoHorarioService;
 

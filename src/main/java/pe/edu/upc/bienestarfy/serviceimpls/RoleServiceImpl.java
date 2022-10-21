@@ -2,6 +2,7 @@ package pe.edu.upc.bienestarfy.serviceimpls;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pe.edu.upc.bienestarfy.entities.Categoria;
 import pe.edu.upc.bienestarfy.entities.Role;
 import pe.edu.upc.bienestarfy.repositories.IRoleRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.IRoleService;
