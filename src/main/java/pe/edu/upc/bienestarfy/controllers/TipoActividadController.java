@@ -22,4 +22,16 @@ public class TipoActividadController {
     public List<TipoActividad> listar() {
         return pService.list();
     }
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable("id") Integer id) {
+        pService.delete(id);
+    }
+    @PutMapping
+    public void modificar(@RequestBody TipoActividad p) {
+        pService.Insert(p);
+    }
+    @PostMapping("/buscar")
+    public List<TipoActividad> buscar(@RequestBody TipoActividad p) {
+        return pService.search(p.getNombreTipoActividad());
+    }
 }

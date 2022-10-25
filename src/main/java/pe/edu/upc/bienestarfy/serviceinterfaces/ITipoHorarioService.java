@@ -6,4 +6,5 @@ import java.util.List;
 public interface ITipoHorarioService {
     public void Insert(TipoHorario tipohorario);
     List<TipoHorario> list();
+
 }
