@@ -10,7 +10,7 @@ public class TipoHorario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTipoHorario;
 
-    @Column(name = "nameTipoHorario",length = 45,nullable = false)
+    @Column(name = "nombreTipoHorario",length = 45,nullable = false)
     private String nombreTipoHorario;
     @Column(name = "descripcionTipoHorario",length = 45,nullable = false)
     private String descripcionTipoHorario;
@@ -42,9 +42,9 @@ public class TipoHorario {
     public TipoHorario() {
     }
 
-    public TipoHorario(int idTipoHorario, String descripcionTipoHorario, String nombreTipoHorario) {
+    public TipoHorario(int idTipoHorario, String nombreTipoHorario, String descripcionTipoHorario) {
         this.idTipoHorario = idTipoHorario;
-        this.descripcionTipoHorario = descripcionTipoHorario;
         this.nombreTipoHorario = nombreTipoHorario;
+        this.descripcionTipoHorario = descripcionTipoHorario;
     }
 }

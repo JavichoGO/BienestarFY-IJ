@@ -1,4 +1,5 @@
 package pe.edu.upc.bienestarfy.repositories;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import pe.edu.upc.bienestarfy.entities.TipoActividad;
@@ -9,6 +10,8 @@ import java.util.List;
 
 @Repository
 public interface ITipoActividadRepository extends JpaRepository<TipoActividad,Integer> {
-    @Query("FROM TipoActividad p " + "WHERE p.nombreTipoActividad like %:nombreTipoActividad")
+    //JPQL
+    @Query("FROM TipoActividad p " + "WHERE p.nombreTipoActividad like %:nombreTipoActividad%")
     List<TipoActividad> buscarNombre(@Param("nombreTipoActividad") String nombreTipoActividad);
 }
+

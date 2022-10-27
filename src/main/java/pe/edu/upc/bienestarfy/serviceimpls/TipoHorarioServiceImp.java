@@ -21,5 +21,12 @@ public class TipoHorarioServiceImp implements ITipoHorarioService {
     public List<TipoHorario> list() {
         return pR.findAll();
     }
-
+    @Override
+    public void delete(int idTipoHorario) {
+        pR.deleteById(idTipoHorario);
+    }
+    @Override
+    public List<TipoHorario> search(String nombreTipoHorario) {
+        return pR.buscarNombre(nombreTipoHorario);
+    }
 }
