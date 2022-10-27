@@ -17,10 +17,22 @@ public class TipoSuscripcionController {
     @PostMapping
     public void registrar(@RequestBody TipoSuscripcion ts) {
 
-        tsService.insert(ts);
+        tsService.Insert(ts);
     }
     @GetMapping
     public List<TipoSuscripcion> listar() {
         return tsService.list();
+    }
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable("id") Integer id) {
+        tsService.delete(id);
+    }
+    @PutMapping
+    public void modificar(@RequestBody TipoSuscripcion p) {
+        tsService.Insert(p);
+    }
+    @PostMapping("/buscar")
+    public List<TipoSuscripcion> buscar(@RequestBody TipoSuscripcion p) {
+        return tsService.search(p.getNombreTipoSuscripcion());
     }
 }

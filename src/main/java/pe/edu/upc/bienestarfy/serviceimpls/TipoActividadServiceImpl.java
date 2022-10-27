@@ -1,4 +1,5 @@
 package pe.edu.upc.bienestarfy.serviceimpls;
+
 import pe.edu.upc.bienestarfy.repositories.ITipoActividadRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ITipoActividadService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,14 @@ public class TipoActividadServiceImpl implements ITipoActividadService {
     @Override
     public List<TipoActividad> list() {
         return tR.findAll();
+    }
+    @Override
+    public void delete(int idTipoActividad) {
+        tR.deleteById(idTipoActividad);
+    }
+    @Override
+    public List<TipoActividad> search(String nombreTipoActividad) {
+        return tR.buscarNombre(nombreTipoActividad);
     }
 }
 
