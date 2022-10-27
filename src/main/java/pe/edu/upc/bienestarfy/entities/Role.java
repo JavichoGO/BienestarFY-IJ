@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "Role")
 public class Role {
-
+//goo
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idRole;
