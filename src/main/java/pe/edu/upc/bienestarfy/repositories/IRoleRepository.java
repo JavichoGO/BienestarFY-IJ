@@ -1,6 +1,5 @@
 package pe.edu.upc.bienestarfy.repositories;
 
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -13,6 +12,6 @@ import java.util.List;
 @Repository
 public interface IRoleRepository extends JpaRepository<Role,Integer> {
     //JPQL
-    @Query("FROM Role p " + "WHERE p.nombreRole like %:nombreRole")
+    @Query("FROM Role p " + "WHERE p.nombreRole like %:nombreRole%")
     List<Role> buscarNombre(@Param("nombreRole") String nombreRole);
 }

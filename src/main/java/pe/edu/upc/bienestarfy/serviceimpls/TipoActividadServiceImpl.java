@@ -1,5 +1,5 @@
 package pe.edu.upc.bienestarfy.serviceimpls;
-import pe.edu.upc.bienestarfy.entities.Role;
+
 import pe.edu.upc.bienestarfy.repositories.ITipoActividadRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ITipoActividadService;
 import org.springframework.beans.factory.annotation.Autowired;
