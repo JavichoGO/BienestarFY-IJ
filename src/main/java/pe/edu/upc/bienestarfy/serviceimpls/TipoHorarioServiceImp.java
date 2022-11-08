@@ -8,8 +8,8 @@ import pe.edu.upc.bienestarfy.repositories.ITipoHorarioRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ITipoHorarioService;
 
 import java.util.List;
-@Service
 
+@Service
 public class TipoHorarioServiceImp implements ITipoHorarioService {
     @Autowired
     private ITipoHorarioRepository pR;
