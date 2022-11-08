@@ -8,25 +8,30 @@ import pe.edu.upc.bienestarfy.repositories.ITipoHorarioRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ITipoHorarioService;
 
 import java.util.List;
+import java.util.Optional;
 @Service
 
 public class TipoHorarioServiceImp implements ITipoHorarioService {
     @Autowired
-    private ITipoHorarioRepository pR;
+    private ITipoHorarioRepository thR;
     @Override
     public void Insert(TipoHorario tipohorario) {
-        pR.save(tipohorario);
+    	thR.save(tipohorario);
     }
     @Override
     public List<TipoHorario> list() {
-        return pR.findAll();
+        return thR.findAll();
     }
     @Override
     public void delete(int idTipoHorario) {
-        pR.deleteById(idTipoHorario);
+    	thR.deleteById(idTipoHorario);
     }
     @Override
     public List<TipoHorario> search(String nombreTipoHorario) {
-        return pR.buscarNombre(nombreTipoHorario);
+        return thR.buscarNombre(nombreTipoHorario);
     }
+	@Override
+	public Optional<TipoHorario> listarId(int idTipoHorario) {
+		return thR.findById(idTipoHorario);
+	}
 }

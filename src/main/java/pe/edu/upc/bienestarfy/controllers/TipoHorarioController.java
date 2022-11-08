@@ -6,7 +6,9 @@ import pe.edu.upc.bienestarfy.entities.TipoActividad;
 import pe.edu.upc.bienestarfy.entities.TipoHorario;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ITipoHorarioService;
 
+import java.text.ParseException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/tipohorario")
@@ -31,7 +33,13 @@ public class TipoHorarioController {
         pService.Insert(p);
     }
     @PostMapping("/buscar")
-    public List<TipoHorario> buscar(@RequestBody TipoHorario p) {
-        return pService.search(p.getNombreTipoHorario());
+    public List<TipoHorario> buscar(@RequestBody String nombreTipoHorario) throws ParseException
+    {        List<TipoHorario> listaTipoHorarios;
+    listaTipoHorarios = pService.search(nombreTipoHorario);
+        return listaTipoHorarios;
+    }
+    @GetMapping("/{id}")
+    public Optional<TipoHorario> listarId(@PathVariable("id") Integer id) {
+        return pService.listarId(id);
     }
 }
