@@ -13,7 +13,8 @@ import java.text.ParseException;
 import java.util.List;
 import java.util.Optional;
 
-
+@RestController
+@RequestMapping("/horario")
 public class HorarioController {
 	   @Autowired
 	    private IHorarioService hService;

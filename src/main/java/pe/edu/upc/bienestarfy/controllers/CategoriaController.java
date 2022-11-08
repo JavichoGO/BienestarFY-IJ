@@ -10,7 +10,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/categoria")
 public class CategoriaController {
-    //pruebacommit
     @Autowired
     private ICategoriaService cService;
     @PostMapping

@@ -12,8 +12,8 @@ public class TipoSuscripcion {
     @Column(name = "nombreTipoSuscripcion", length = 100, nullable = false)
     private String nombreTipoSuscripcion;
 
-    @Column(name = "descricpcionTipoSuscripcion", length = 100, nullable = true)
-    private String descricpcionTipoSuscripcion;
+    @Column(name = "descripcionTipoSuscripcion", length = 100, nullable = true)
+    private String descripcionTipoSuscripcion;
 
     @Column(name = "descuentoTipoSuscripcion", nullable = false)
     private int descuentoTipoSuscripcion;
@@ -37,12 +37,12 @@ public class TipoSuscripcion {
     public void setNombreTipoSuscripcion(String nombreTipoSuscripcion) {
         this.nombreTipoSuscripcion = nombreTipoSuscripcion;
     }
-    public String getDescricpcionTipoSuscripcion() {
-        return descricpcionTipoSuscripcion;
+    public String getDescripcionTipoSuscripcion() {
+        return descripcionTipoSuscripcion;
     }
 
-    public void setDescricpcionTipoSuscripcion(String descricpcionTipoSuscripcion) {
-        this.descricpcionTipoSuscripcion = descricpcionTipoSuscripcion;
+    public void setDescripcionTipoSuscripcion(String descripcionTipoSuscripcion) {
+        this.descripcionTipoSuscripcion = descripcionTipoSuscripcion;
     }
 
     public int getDescuentoTipoSuscripcion() {
@@ -53,10 +53,10 @@ public class TipoSuscripcion {
         this.descuentoTipoSuscripcion = descuentoTipoSuscripcion;
     }
 
-    public TipoSuscripcion(int idTipoSuscripcion, String nombreCategoria, String descricpcionTipoSuscripcion, int descuentoTipoSuscripcion, String nombreTipoSuscripcion) {
+    public TipoSuscripcion(int idTipoSuscripcion, String nombreCategoria, String descripcionTipoSuscripcion, int descuentoTipoSuscripcion, String nombreTipoSuscripcion) {
         this.idTipoSuscripcion = idTipoSuscripcion;
         this.nombreTipoSuscripcion = nombreTipoSuscripcion;
-        this.descricpcionTipoSuscripcion = descricpcionTipoSuscripcion;
+        this.descripcionTipoSuscripcion = descripcionTipoSuscripcion;
         this.descuentoTipoSuscripcion = descuentoTipoSuscripcion;
     }
 }

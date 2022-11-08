@@ -17,73 +17,80 @@ public class Suscripcion implements Serializable {
     @Column(name = "precioSuscripcion", nullable = false)
     private int precioSuscripcion;
 
-    @Column(name = "fechaInicioSuscripcion", length = 36, nullable = false)
-    private String fechaInicioSuscripcion;
+    @Column(name = "fechaInicio", length = 36, nullable = false)
+    private String fechaInicio;
 
-    @Column(name = "fechaFinSuscripcion", length = 36, nullable = false)
-    private String fechaFinSuscripcion;
+    @Column(name = "fechaFin", length = 36, nullable = false)
+    private String fechaFin;
 
     @ManyToOne
     @JoinColumn(name = "idTipoSuscripcion", nullable = false)
     private TipoSuscripcion tipoSuscripcion;
 
+	public Suscripcion() {
 
-    public Suscripcion() {
-    }
-    public Suscripcion(int idSuscripcion, String nombreSuscripcion, int precioSuscripcion, String fechaInicioSuscripcion, String fechaFinSuscripcion, TipoSuscripcion tipoSuscripcion) {
-        this.idSuscripcion = idSuscripcion;
-        this.nombreSuscripcion = nombreSuscripcion;
-        this.precioSuscripcion = precioSuscripcion;
-        this.fechaInicioSuscripcion = fechaInicioSuscripcion;
-        this.fechaFinSuscripcion = fechaFinSuscripcion;
-        this.tipoSuscripcion = tipoSuscripcion;
-    }
+	}
 
-    public int getIdSuscripcion() {
-        return idSuscripcion;
-    }
+	public Suscripcion(int idSuscripcion, String nombreSuscripcion, int precioSuscripcion, String fechaInicio,
+			String fechaFin, TipoSuscripcion tipoSuscripcion) {
+		this.idSuscripcion = idSuscripcion;
+		this.nombreSuscripcion = nombreSuscripcion;
+		this.precioSuscripcion = precioSuscripcion;
+		this.fechaInicio = fechaInicio;
+		this.fechaFin = fechaFin;
+		this.tipoSuscripcion = tipoSuscripcion;
+	}
 
-    public void setIdSuscripcion(int idSuscripcion) {
-        this.idSuscripcion = idSuscripcion;
-    }
+	public int getIdSuscripcion() {
+		return idSuscripcion;
+	}
 
-    public String getNombreSuscripcion() {
-        return nombreSuscripcion;
-    }
+	public void setIdSuscripcion(int idSuscripcion) {
+		this.idSuscripcion = idSuscripcion;
+	}
 
-    public void setNombreSuscripcion(String nombreSuscripcion) {
-        this.nombreSuscripcion = nombreSuscripcion;
-    }
+	public String getNombreSuscripcion() {
+		return nombreSuscripcion;
+	}
 
-    public int getPrecioSuscripcion() {
-        return precioSuscripcion;
-    }
+	public void setNombreSuscripcion(String nombreSuscripcion) {
+		this.nombreSuscripcion = nombreSuscripcion;
+	}
 
-    public void setPrecioSuscripcion(int precioSuscripcion) {
-        this.precioSuscripcion = precioSuscripcion;
-    }
+	public int getPrecioSuscripcion() {
+		return precioSuscripcion;
+	}
 
-    public String getFechaInicioSuscripcion() {
-        return fechaInicioSuscripcion;
-    }
+	public void setPrecioSuscripcion(int precioSuscripcion) {
+		this.precioSuscripcion = precioSuscripcion;
+	}
 
-    public void setFechaInicioSuscripcion(String fechaInicioSuscripcion) {
-        this.fechaInicioSuscripcion = fechaInicioSuscripcion;
-    }
+	public String getFechaInicio() {
+		return fechaInicio;
+	}
 
-    public String getFechaFinSuscripcion() {
-        return fechaFinSuscripcion;
-    }
+	public void setFechaInicio(String fechaInicio) {
+		this.fechaInicio = fechaInicio;
+	}
 
-    public void setFechaFinSuscripcion(String fechaFinSuscripcion) {
-        this.fechaFinSuscripcion = fechaFinSuscripcion;
-    }
+	public String getFechaFin() {
+		return fechaFin;
+	}
 
-    public TipoSuscripcion getTipoSuscripcion() {
-        return tipoSuscripcion;
-    }
+	public void setFechaFin(String fechaFin) {
+		this.fechaFin = fechaFin;
+	}
 
-    public void setTipoSuscripcion(TipoSuscripcion tipoSuscripcion) {
-        this.tipoSuscripcion = tipoSuscripcion;
-    }
+	public TipoSuscripcion getTipoSuscripcion() {
+		return tipoSuscripcion;
+	}
+
+	public void setTipoSuscripcion(TipoSuscripcion tipoSuscripcion) {
+		this.tipoSuscripcion = tipoSuscripcion;
+	}
+	
+	
+
+    
+
 }
