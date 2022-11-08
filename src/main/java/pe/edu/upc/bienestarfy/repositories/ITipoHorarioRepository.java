@@ -13,6 +13,6 @@ import java.util.List;
 @Repository
 public interface ITipoHorarioRepository extends JpaRepository<TipoHorario, Integer> {
     //JPQL
-    @Query("FROM TipoHorario p " + "WHERE p.nombreTipoHorario like %:nombreTipoHorario%")
+    @Query("FROM TipoHorario p " + "WHERE p.nombreTipoHorario like %:nombreTipoHorario")
     List<TipoHorario> buscarNombre(@Param("nombreTipoHorario") String nombreTipoHorario);
 }

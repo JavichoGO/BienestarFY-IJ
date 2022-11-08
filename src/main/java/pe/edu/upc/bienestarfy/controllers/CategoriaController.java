@@ -8,12 +8,12 @@ import pe.edu.upc.bienestarfy.serviceinterfaces.ICategoriaService;
 
 import java.util.List;
 @RestController
-@RequestMapping("/categoria")
+@RequestMapping("/-")
 public class CategoriaController {
     //pruebacommit
     @Autowired
     private ICategoriaService cService;
-    @PostMapping
+    @PostMapping("/evaluacion/tb3")
     public void registrar(@RequestBody Categoria c) {
 
         cService.insert(c);
@@ -32,6 +32,6 @@ public class CategoriaController {
     }
     @PostMapping("/buscar")
     public List<Categoria> buscar(@RequestBody Categoria p) {
-        return cService.search(p.getNombreCategoria());
+        return cService.search(p.getDescricpcionCategoria());
     }
 }

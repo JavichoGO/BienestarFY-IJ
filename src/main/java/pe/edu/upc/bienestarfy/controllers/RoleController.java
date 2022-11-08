@@ -7,7 +7,9 @@ import pe.edu.upc.bienestarfy.entities.Role;
 import pe.edu.upc.bienestarfy.entities.TipoHorario;
 import pe.edu.upc.bienestarfy.serviceinterfaces.IRoleService;
 
+import java.text.ParseException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/role")
@@ -32,7 +34,13 @@ public class RoleController {
         pService.Insert(p);
     }
     @PostMapping("/buscar")
-    public List<Role> buscar(@RequestBody Role p) {
-        return pService.search(p.getNombreRole());
+    public List<Role> buscar(@RequestBody String nombreRole) throws ParseException
+    {        List<Role> listaPropietarios;
+        listaPropietarios = pService.search(nombreRole);
+        return listaPropietarios;
+    }
+    @GetMapping("/{id}")
+    public Optional<Role> listarId(@PathVariable("id") Integer id) {
+        return pService.listarId(id);
     }
 }

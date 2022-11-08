@@ -8,5 +8,5 @@ public interface ICategoriaService {
     public void insert(Categoria categoria);
     List<Categoria> list();
     public void delete(int idCategoria);
-    List<Categoria>search(String nombreCategoria);
+    List<Categoria>search(String descricpcionCategoria);
 }
