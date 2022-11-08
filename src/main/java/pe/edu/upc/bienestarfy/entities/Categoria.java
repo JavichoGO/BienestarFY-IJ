@@ -12,8 +12,8 @@ public class Categoria {
     @Column(name = "nombreCategoria",length = 100,nullable = false)
     private String nombreCategoria;
 
-    @Column(name = "descricpcionCategoria",length = 100,nullable = true)
-    private String descricpcionCategoria;
+    @Column(name = "descripcionCategoria",length = 100,nullable = true)
+    private String descripcionCategoria;
 
     public Categoria() {
     }
@@ -34,17 +34,17 @@ public class Categoria {
         this.nombreCategoria = nombreCategoria;
     }
 
-    public String getDescricpcionCategoria() {
-        return descricpcionCategoria;
+    public String getDescripcionCategoria() {
+        return descripcionCategoria;
     }
 
-    public void setDescricpcionCategoria(String descricpcionCategoria) {
-        this.descricpcionCategoria = descricpcionCategoria;
+    public void setDescripcionCategoria(String descripcionCategoria) {
+        this.descripcionCategoria = descripcionCategoria;
     }
 
-    public Categoria(int idCategoria, String nombreCategoria, String descricpcionCategoria) {
+    public Categoria(int idCategoria, String nombreCategoria, String descripcionCategoria) {
         this.idCategoria = idCategoria;
         this.nombreCategoria = nombreCategoria;
-        this.descricpcionCategoria = descricpcionCategoria;
+        this.descripcionCategoria = descripcionCategoria;
     }
 }

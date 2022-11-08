@@ -49,3 +49,4 @@ public class Role {
         this.descripcionRole = descripcionRole;
     }
 }
+
