@@ -17,6 +17,6 @@ public interface IHorarioRepository extends JpaRepository<Horario, Integer>  {
     @Query("FROM Horario a " + "WHERE a.nombreHorario like %:nombreHorario%")
     List<Horario> buscarNombre(@Param("nombreHorario") String nombreHorario);
 
-    @Query("from Horario a where a.tipohorario.nombreTipoHorario like %:nombreTipoHorario%")
+    @Query("from Horario a where a.tipoHorario.nombreTipoHorario like %:nombreTipoHorario%")
     List<Horario> searchnombreTipoHorario(@Param("nombreTipoHorario") String nombreTipoHorario);
 }

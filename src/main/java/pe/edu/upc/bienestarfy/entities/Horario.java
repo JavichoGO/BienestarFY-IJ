@@ -28,23 +28,22 @@ public class Horario implements Serializable{
 
     @ManyToOne
     @JoinColumn(name = "idTipoHorario", nullable = false)
-    private TipoHorario tipohorario;
+    private TipoHorario tipoHorario;
 
-    
-    
+	public Horario() {
+
+	}
+
 	public Horario(int idHorario, String nombreHorario, String descripcionHorario, String fechaHorario,
-			String horaHorario, Usuario usuario, TipoHorario tipohorario) {
+			String horaHorario, Usuario usuario, TipoHorario tipoHorario) {
+		super();
 		this.idHorario = idHorario;
 		this.nombreHorario = nombreHorario;
 		this.descripcionHorario = descripcionHorario;
 		this.fechaHorario = fechaHorario;
 		this.horaHorario = horaHorario;
 		this.usuario = usuario;
-		this.tipohorario = tipohorario;
-	}
-
-	public Horario() {
-	
+		this.tipoHorario = tipoHorario;
 	}
 
 	public int getIdHorario() {
@@ -95,14 +94,15 @@ public class Horario implements Serializable{
 		this.usuario = usuario;
 	}
 
-	public TipoHorario getTipohorario() {
-		return tipohorario;
+	public TipoHorario getTipoHorario() {
+		return tipoHorario;
 	}
 
-	public void setTipohorario(TipoHorario tipohorario) {
-		this.tipohorario = tipohorario;
+	public void setTipoHorario(TipoHorario tipoHorario) {
+		this.tipoHorario = tipoHorario;
 	}
+
 	
-    
+
     
 }

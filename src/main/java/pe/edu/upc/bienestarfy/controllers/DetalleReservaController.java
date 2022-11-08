@@ -40,7 +40,7 @@ public class DetalleReservaController {
         List<DetalleReserva> listaDetalleReservas;
         listaDetalleReservas = drService.search(dr.getNombreDetalleReserva());
         if (listaDetalleReservas.isEmpty()) {
-        	//listaDetalleReservas = drService.search(dr.getReserva().getNombreReserva());
+        	listaDetalleReservas = drService.search(dr.getReserva().getNombreReserva());
         }
         return listaDetalleReservas;
     }

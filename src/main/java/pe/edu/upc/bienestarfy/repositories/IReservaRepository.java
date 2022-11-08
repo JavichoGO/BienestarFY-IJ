@@ -9,8 +9,8 @@ import java.util.Date;
 import java.util.List;
 
 public interface IReservaRepository extends JpaRepository<Reserva,Integer> {
-    @Query("FROM Reserva r " + "WHERE r.fechaReserva like %:fechaReserva")
-    List<Reserva> buscarFecha(@Param("fechaReserva") Date fechaReserva);
-    @Query("FROM Reserva r " + "WHERE r.usuario.nombreUsuario like %:nombreUsuario")
+    @Query("FROM Reserva r " + "WHERE r.nombreReserva like %:nombreReserva")
+    List<Reserva> buscarNombre(@Param("nombreReserva") String nombreReserva);
+    @Query("FROM Reserva r WHERE r.usuario.nombreUsuario like %:nombreUsuario")
     List<Reserva> buscarnombreUsuario(@Param("nombreUsuario") String nombreUsuario);
 }

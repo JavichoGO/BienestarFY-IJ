@@ -21,8 +21,8 @@ public class DetalleReservaServiceImpl implements IDetalleReservaService {
 	    private IDetalleReservaRepository drR;
 	    @Override
 	    @Transactional
-	    public boolean Insert(DetalleReserva detallereserva) {
-	    	DetalleReserva objDetalleReserva = drR.save(detallereserva);
+	    public boolean Insert(DetalleReserva detalleReserva) {
+	    	DetalleReserva objDetalleReserva = drR.save(detalleReserva);
 	        if (objDetalleReserva == null) {
 	            return false;
 	        } else {

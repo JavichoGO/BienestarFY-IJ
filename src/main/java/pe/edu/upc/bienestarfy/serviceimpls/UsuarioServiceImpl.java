@@ -40,7 +40,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
     }
     @Override
     public List<Usuario> searchRole(String roleUsuario) {
-        return rU.buscarnombreRole(roleUsuario);
+        return rU.searchnombreRole(roleUsuario);
     }
     @Override
     public Optional<Usuario> listarId(int idUsuario) {

@@ -13,7 +13,7 @@ public interface IUsuarioRepository extends JpaRepository<Usuario,Integer> {
     List<Usuario> buscarNombre(@Param("nombreUsuario") String nombreUsuario);
 
     @Query("from Usuario u where u.role.nombreRole like %:nombreRole%")
-    List<Usuario> buscarnombreRole(@Param("nombreRole") String nombreRole);
+    List<Usuario> searchnombreRole(@Param("nombreRole") String nombreRole);
 
 
 }
