@@ -35,12 +35,12 @@ public class ReservaServiceImpl implements IReservaService {
         rR.deleteById(idUsuario);
     }
     @Override
-    public List<Reserva> search(Date fechaReserva) {
-        return rR.buscarFecha(fechaReserva);
+    public List<Reserva> search(String nombreReserva) {
+        return rR.buscarNombre(nombreReserva);
     }
     @Override
-    public List<Reserva> searchUsuario(String nombreUsuario) {
-        return rR.buscarnombreUsuario(nombreUsuario);
+    public List<Reserva> searchUsuario(String nomUsuario) {
+        return rR.buscarnombreUsuario(nomUsuario);
     }
     @Override
     public Optional<Reserva> listarId(int idReserva) {

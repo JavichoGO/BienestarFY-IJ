@@ -19,10 +19,10 @@ public class Reserva implements Serializable {
     private int idReserva;
 
     @Column(name = "nombreReserva", length = 36, nullable = false)
-    private Date nombreReserva;
+    private String nombreReserva;
     
     @Column(name = "fechaReserva", length = 36, nullable = false)
-    private Date fechaReserva;
+    private String fechaReserva;
 
     @ManyToOne
     @JoinColumn(name = "idUsuario", nullable = false)
@@ -36,7 +36,7 @@ public class Reserva implements Serializable {
 
 	}
 
-	public Reserva(int idReserva, Date nombreReserva, Date fechaReserva, Usuario usuario, Horario horario) {
+	public Reserva(int idReserva, String nombreReserva, String fechaReserva, Usuario usuario, Horario horario) {
 		super();
 		this.idReserva = idReserva;
 		this.nombreReserva = nombreReserva;
@@ -53,19 +53,19 @@ public class Reserva implements Serializable {
 		this.idReserva = idReserva;
 	}
 
-	public Date getNombreReserva() {
+	public String getNombreReserva() {
 		return nombreReserva;
 	}
 
-	public void setNombreReserva(Date nombreReserva) {
+	public void setNombreReserva(String nombreReserva) {
 		this.nombreReserva = nombreReserva;
 	}
 
-	public Date getFechaReserva() {
+	public String getFechaReserva() {
 		return fechaReserva;
 	}
 
-	public void setFechaReserva(Date fechaReserva) {
+	public void setFechaReserva(String fechaReserva) {
 		this.fechaReserva = fechaReserva;
 	}
 
@@ -85,6 +85,8 @@ public class Reserva implements Serializable {
 		this.horario = horario;
 	}
 	
+	
+
 	
 
     

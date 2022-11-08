@@ -35,7 +35,7 @@ public class ReservaController {
     @PostMapping("/buscar")
     public List<Reserva> buscar(@RequestBody Reserva v) throws ParseException {
         List<Reserva> listaReservas;
-        listaReservas = pService.search(v.getFechaReserva());
+        listaReservas = pService.search(v.getNombreReserva());
         if (listaReservas.isEmpty()) {
             listaReservas = pService.searchUsuario(v.getUsuario().getNombreUsuario());
         }

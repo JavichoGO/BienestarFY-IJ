@@ -38,7 +38,7 @@ public class ActividadController {
         List<Actividad> listaActividades;
         listaActividades = aService.search(a.getNombreActividad());
         if (listaActividades.isEmpty()) {
-            listaActividades = aService.search(a.getTipoactividad().getNombreTipoActividad());
+            listaActividades = aService.search(a.getTipoActividad().getNombreTipoActividad());
         }
         return listaActividades;
     }

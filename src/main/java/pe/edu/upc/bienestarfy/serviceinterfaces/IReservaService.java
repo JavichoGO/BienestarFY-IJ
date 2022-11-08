@@ -1,5 +1,6 @@
 package pe.edu.upc.bienestarfy.serviceinterfaces;
 
+import pe.edu.upc.bienestarfy.entities.Actividad;
 import pe.edu.upc.bienestarfy.entities.Reserva;
 
 import java.util.Date;
@@ -11,6 +12,6 @@ public interface IReservaService {
     public void delete(int idReserva);
     Optional<Reserva> listarId(int idReserva);
     List<Reserva> list();
-    List<Reserva>search(Date fechaReserva);
+    List<Reserva>search(String nombreReserva);
     List<Reserva>searchUsuario(String reservaUsuario);
 }

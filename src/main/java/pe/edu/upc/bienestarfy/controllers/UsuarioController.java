@@ -41,6 +41,8 @@ public class UsuarioController {
         listaUsuarios = pService.search(v.getNombreUsuario());
         if (listaUsuarios.isEmpty()) {
             listaUsuarios = pService.search(v.getRole().getNombreRole());
+            listaUsuarios = pService.search(v.getCategoria().getNombreCategoria());
+            listaUsuarios = pService.search(v.getSuscripcion().getNombreSuscripcion());
         }
         return listaUsuarios;
     }

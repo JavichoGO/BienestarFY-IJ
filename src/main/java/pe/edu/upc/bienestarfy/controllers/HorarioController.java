@@ -40,7 +40,7 @@ public class HorarioController {
 	        List<Horario> listaHorarios;
 	        listaHorarios = hService.search(h.getNombreHorario());
 	        if (listaHorarios.isEmpty()) {
-	            listaHorarios = hService.search(h.getTipohorario().getNombreTipoHorario());
+	            listaHorarios = hService.search(h.getTipoHorario().getNombreTipoHorario());
 	        }
 	        return listaHorarios;
 	    }
