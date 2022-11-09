@@ -9,11 +9,10 @@ import java.util.List;
 
 public interface IUsuarioRepository extends JpaRepository<Usuario,Integer> {
     //JPQL
-    @Query("FROM Usuario u " + "WHERE u.nombreUsuario like %:nombreUsuario")
+    @Query("FROM Usuario u " + "WHERE u.nombreUsuario like %:nombreUsuario%")
     List<Usuario> buscarNombre(@Param("nombreUsuario") String nombreUsuario);
 
     @Query("from Usuario u where u.role.nombreRole like %:nombreRole%")
-    List<Usuario> buscarnombreRole(@Param("nombreRole") String nombreRole);
-
+    List<Usuario> searchnombreRole(@Param("nombreRole") String nombreRole);
 
 }

@@ -12,9 +12,9 @@ import java.util.List;
 public interface IActividadRepository extends JpaRepository<Actividad, Integer> {
 
     //JPQL
-    @Query("FROM Actividad a " + "WHERE a.nombreActividad like %:nombreActividad")
+    @Query("FROM Actividad a " + "WHERE a.nombreActividad like %:nombreActividad%")
     List<Actividad> buscarNombre(@Param("nombreActividad") String nombreActividad);
 
-    @Query("from Actividad a where a.tipoactividad.nombreTipoActividad like %:nombreTipoActividad%")
+    @Query("from Actividad a where a.tipoActividad.nombreTipoActividad like %:nombreTipoActividad%")
     List<Actividad> searchnombreTipoActividad(@Param("nombreTipoActividad") String nombreTipoActividad);
 }

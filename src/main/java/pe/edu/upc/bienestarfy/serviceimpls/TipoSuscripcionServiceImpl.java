@@ -1,3 +1,4 @@
+
 package pe.edu.upc.bienestarfy.serviceimpls;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import pe.edu.upc.bienestarfy.repositories.ITipoSuscripcionRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ITipoSuscripcionService;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TipoSuscripcionServiceImpl implements ITipoSuscripcionService {
@@ -15,7 +17,7 @@ public class TipoSuscripcionServiceImpl implements ITipoSuscripcionService {
     private ITipoSuscripcionRepository tsR;
 
     @Override
-    public void Insert(TipoSuscripcion tiposuscripcion) { tsR.save(tiposuscripcion);}
+    public void Insert(TipoSuscripcion tipoSuscripcion) { tsR.save(tipoSuscripcion);}
 
     @Override
     public List<TipoSuscripcion> list() {return tsR.findAll();}
@@ -27,4 +29,9 @@ public class TipoSuscripcionServiceImpl implements ITipoSuscripcionService {
     public List<TipoSuscripcion> search(String nombreTipoSuscripcion) {
         return tsR.buscarNombre(nombreTipoSuscripcion);
     }
+
+	@Override
+	public Optional<TipoSuscripcion> listarId(int idTipoSuscripcion) {
+		return tsR.findById(idTipoSuscripcion);
+	}
 }

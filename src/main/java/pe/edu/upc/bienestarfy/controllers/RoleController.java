@@ -35,9 +35,9 @@ public class RoleController {
     }
     @PostMapping("/buscar")
     public List<Role> buscar(@RequestBody String nombreRole) throws ParseException
-    {        List<Role> listaPropietarios;
-        listaPropietarios = pService.search(nombreRole);
-        return listaPropietarios;
+    {        List<Role> listaRoles;
+    listaRoles = pService.search(nombreRole);
+        return listaRoles;
     }
     @GetMapping("/{id}")
     public Optional<Role> listarId(@PathVariable("id") Integer id) {

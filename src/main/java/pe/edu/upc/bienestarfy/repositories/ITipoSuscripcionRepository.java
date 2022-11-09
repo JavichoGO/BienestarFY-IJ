@@ -12,6 +12,6 @@ import java.util.List;
 @Repository
 public interface ITipoSuscripcionRepository extends JpaRepository<TipoSuscripcion,Integer> {
     //JPQL
-    @Query("FROM TipoSuscripcion p " + "WHERE p.nombreTipoSuscripcion like %:nombreTipoSuscripcion")
+    @Query("FROM TipoSuscripcion p " + "WHERE p.nombreTipoSuscripcion like %:nombreTipoSuscripcion%")
     List<TipoSuscripcion> buscarNombre(@Param("nombreTipoSuscripcion") String nombreTipoSuscripcion);
 }

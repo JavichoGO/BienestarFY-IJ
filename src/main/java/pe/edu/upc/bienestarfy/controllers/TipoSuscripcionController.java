@@ -2,10 +2,14 @@ package pe.edu.upc.bienestarfy.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import pe.edu.upc.bienestarfy.entities.Role;
 import pe.edu.upc.bienestarfy.entities.TipoSuscripcion;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ITipoSuscripcionService;
 
+import java.text.ParseException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/tiposuscripcion")
@@ -32,7 +36,12 @@ public class TipoSuscripcionController {
         tsService.Insert(p);
     }
     @PostMapping("/buscar")
-    public List<TipoSuscripcion> buscar(@RequestBody TipoSuscripcion p) {
-        return tsService.search(p.getNombreTipoSuscripcion());
+    public List<TipoSuscripcion> buscar(@RequestBody String nombreTipoSuscripcion) throws ParseException
+    {        List<TipoSuscripcion> listaTipoSuscripciones;
+    listaTipoSuscripciones = tsService.search(nombreTipoSuscripcion);
+        return listaTipoSuscripciones;
     }
-}
+    @GetMapping("/{id}")
+    public Optional<TipoSuscripcion> listarId(@PathVariable("id") Integer id) {
+        return tsService.listarId(id);
+    }
