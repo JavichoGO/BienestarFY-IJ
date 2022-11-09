@@ -45,4 +45,3 @@ public class TipoSuscripcionController {
     public Optional<TipoSuscripcion> listarId(@PathVariable("id") Integer id) {
         return tsService.listarId(id);
     }
-}
