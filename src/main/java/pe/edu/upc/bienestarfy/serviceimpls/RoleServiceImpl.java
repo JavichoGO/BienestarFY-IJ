@@ -34,3 +34,4 @@ public class RoleServiceImpl implements IRoleService {
     public Optional<Role> listarId(int idRole) {
         return rR.findById(idRole);
     }
+}

@@ -14,4 +14,3 @@ public interface ITipoActividadRepository extends JpaRepository<TipoActividad,In
     @Query("FROM TipoActividad p " + "WHERE p.nombreTipoActividad like %:nombreTipoActividad%")
     List<TipoActividad> buscarNombre(@Param("nombreTipoActividad") String nombreTipoActividad);
 }
-

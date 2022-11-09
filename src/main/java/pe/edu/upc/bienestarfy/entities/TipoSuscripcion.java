@@ -12,11 +12,19 @@ public class TipoSuscripcion {
     @Column(name = "nombreTipoSuscripcion", length = 100, nullable = false)
     private String nombreTipoSuscripcion;
 
+
     @Column(name = "descripcionTipoSuscripcion", length = 100, nullable = true)
     private String descripcionTipoSuscripcion;
 
     @Column(name = "descuentoTipoSuscripcion", nullable = false)
     private int descuentoTipoSuscripcion;
+
+    public TipoSuscripcion(int idTipoSuscripcion, String nombreTipoSuscripcion, String descripcionTipoSuscripcion, int descuentoTipoSuscripcion) {
+        this.idTipoSuscripcion = idTipoSuscripcion;
+        this.nombreTipoSuscripcion = nombreTipoSuscripcion;
+        this.descripcionTipoSuscripcion = descripcionTipoSuscripcion;
+        this.descuentoTipoSuscripcion = descuentoTipoSuscripcion;
+    }
 
     public TipoSuscripcion() {
 
@@ -37,6 +45,7 @@ public class TipoSuscripcion {
     public void setNombreTipoSuscripcion(String nombreTipoSuscripcion) {
         this.nombreTipoSuscripcion = nombreTipoSuscripcion;
     }
+
     public String getDescripcionTipoSuscripcion() {
         return descripcionTipoSuscripcion;
     }
@@ -53,6 +62,7 @@ public class TipoSuscripcion {
         this.descuentoTipoSuscripcion = descuentoTipoSuscripcion;
     }
 
+
     public TipoSuscripcion(int idTipoSuscripcion, String nombreCategoria, String descripcionTipoSuscripcion, int descuentoTipoSuscripcion, String nombreTipoSuscripcion) {
         this.idTipoSuscripcion = idTipoSuscripcion;
         this.nombreTipoSuscripcion = nombreTipoSuscripcion;
@@ -60,3 +70,4 @@ public class TipoSuscripcion {
         this.descuentoTipoSuscripcion = descuentoTipoSuscripcion;
     }
 }
+

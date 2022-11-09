@@ -29,8 +29,8 @@ public class CategoriaServiceImpl implements ICategoriaService {
     	cR.deleteById(idCategoria);
     }
     @Override
-    public List<Categoria> search(String nombreCategoria) {
-        return cR.buscarNombre(nombreCategoria);
+    public List<Categoria> search(String descricpcionCategoria) {
+        return cR.buscarNombre(descricpcionCategoria);
     }
     @Override
     public Optional<Categoria> listarId(int idCategoria) {
