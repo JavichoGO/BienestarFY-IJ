@@ -1,3 +1,4 @@
+
 package pe.edu.upc.bienestarfy.serviceinterfaces;
 import pe.edu.upc.bienestarfy.entities.Role;
 import pe.edu.upc.bienestarfy.entities.TipoActividad;
@@ -13,3 +14,4 @@ public interface ITipoActividadService {
     public Optional<TipoActividad> listarId(int idTipoActividad);
     List<TipoActividad>search(String nombreTipoActividad);
 }
+

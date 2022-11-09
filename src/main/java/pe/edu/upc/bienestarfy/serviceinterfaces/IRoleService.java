@@ -1,3 +1,4 @@
+
 package pe.edu.upc.bienestarfy.serviceinterfaces;
 
 
@@ -18,4 +19,3 @@ public interface IRoleService {
 
 
 
-}
