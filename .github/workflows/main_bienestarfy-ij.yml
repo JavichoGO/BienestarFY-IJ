@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'BienestarFY-IJ'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2AD65297B1D0422EB9A2EB006A9FE29D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_789ACF53E3954748AAF78A1A20D78131 }}
           package: '*.jar'
