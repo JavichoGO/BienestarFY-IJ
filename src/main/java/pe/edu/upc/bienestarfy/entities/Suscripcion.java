@@ -17,7 +17,6 @@ public class Suscripcion implements Serializable {
     @Column(name = "precioSuscripcion", nullable = false)
     private int precioSuscripcion;
 
-
     @Column(name = "fechaInicio", length = 36, nullable = false)
     private String fechaInicio;
 
@@ -27,7 +26,6 @@ public class Suscripcion implements Serializable {
     @ManyToOne
     @JoinColumn(name = "idTipoSuscripcion", nullable = false)
     private TipoSuscripcion tipoSuscripcion;
-
 
 	public Suscripcion() {
 

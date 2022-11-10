@@ -46,6 +46,4 @@ public class SuscripcionServiceImpl implements ISuscripcionService {
         return rS.findById(idSuscripcion);
     }
 
-
 }
-

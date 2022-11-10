@@ -13,6 +13,6 @@ import java.util.List;
 public interface ICategoriaRepository extends JpaRepository<Categoria,Integer> {
 
     //JPQL
-    @Query("FROM Categoria p " + "WHERE p.descricpcionCategoria like %:descricpcionCategoria")
-    List<Categoria> buscarNombre(@Param("descricpcionCategoria") String descricpcionCategoria);
+    @Query("FROM Categoria p " + "WHERE p.nombreCategoria like %:nombreCategoria%")
+    List<Categoria> buscarNombre(@Param("nombreCategoria") String nombreCategoria);
 }

@@ -11,11 +11,11 @@ import java.text.ParseException;
 import java.util.List;
 import java.util.Optional;
 @RestController
-@RequestMapping("/-")
+@RequestMapping("/categoria")
 public class CategoriaController {
     @Autowired
     private ICategoriaService cService;
-    @PostMapping("/evaluacion/tb3")
+    @PostMapping
     public void registrar(@RequestBody Categoria c) {
 
         cService.Insert(c);
