@@ -12,62 +12,60 @@ public class TipoSuscripcion {
     @Column(name = "nombreTipoSuscripcion", length = 100, nullable = false)
     private String nombreTipoSuscripcion;
 
-
-    @Column(name = "descripcionTipoSuscripcion", length = 100, nullable = true)
+    @Column(name = "descripcionTipoSuscripcion", length = 500, nullable = true)
     private String descripcionTipoSuscripcion;
 
     @Column(name = "descuentoTipoSuscripcion", nullable = false)
     private int descuentoTipoSuscripcion;
+    
 
-    public TipoSuscripcion(int idTipoSuscripcion, String nombreTipoSuscripcion, String descripcionTipoSuscripcion, int descuentoTipoSuscripcion) {
-        this.idTipoSuscripcion = idTipoSuscripcion;
-        this.nombreTipoSuscripcion = nombreTipoSuscripcion;
-        this.descripcionTipoSuscripcion = descripcionTipoSuscripcion;
-        this.descuentoTipoSuscripcion = descuentoTipoSuscripcion;
-    }
+	public TipoSuscripcion() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-    public TipoSuscripcion() {
+	public int getIdTipoSuscripcion() {
+		return idTipoSuscripcion;
+	}
 
-    }
+	public void setIdTipoSuscripcion(int idTipoSuscripcion) {
+		this.idTipoSuscripcion = idTipoSuscripcion;
+	}
 
-    public int getIdTipoSuscripcion() {
-        return idTipoSuscripcion;
-    }
+	public String getNombreTipoSuscripcion() {
+		return nombreTipoSuscripcion;
+	}
 
-    public void setIdTipoSuscripcion(int idTipoSuscripcion) {
-        this.idTipoSuscripcion = idTipoSuscripcion;
-    }
+	public void setNombreTipoSuscripcion(String nombreTipoSuscripcion) {
+		this.nombreTipoSuscripcion = nombreTipoSuscripcion;
+	}
 
-    public String getNombreTipoSuscripcion() {
-        return nombreTipoSuscripcion;
-    }
+	public String getDescripcionTipoSuscripcion() {
+		return descripcionTipoSuscripcion;
+	}
 
-    public void setNombreTipoSuscripcion(String nombreTipoSuscripcion) {
-        this.nombreTipoSuscripcion = nombreTipoSuscripcion;
-    }
+	public void setDescripcionTipoSuscripcion(String descripcionTipoSuscripcion) {
+		this.descripcionTipoSuscripcion = descripcionTipoSuscripcion;
+	}
 
-    public String getDescripcionTipoSuscripcion() {
-        return descripcionTipoSuscripcion;
-    }
+	public int getDescuentoTipoSuscripcion() {
+		return descuentoTipoSuscripcion;
+	}
 
-    public void setDescripcionTipoSuscripcion(String descripcionTipoSuscripcion) {
-        this.descripcionTipoSuscripcion = descripcionTipoSuscripcion;
-    }
+	public void setDescuentoTipoSuscripcion(int descuentoTipoSuscripcion) {
+		this.descuentoTipoSuscripcion = descuentoTipoSuscripcion;
+	}
 
-    public int getDescuentoTipoSuscripcion() {
-        return descuentoTipoSuscripcion;
-    }
+	
 
-    public void setDescuentoTipoSuscripcion(int descuentoTipoSuscripcion) {
-        this.descuentoTipoSuscripcion = descuentoTipoSuscripcion;
-    }
+	public TipoSuscripcion(int idTipoSuscripcion, String nombreTipoSuscripcion, String descripcionTipoSuscripcion,
+			int descuentoTipoSuscripcion) {
+		super();
+		this.idTipoSuscripcion = idTipoSuscripcion;
+		this.nombreTipoSuscripcion = nombreTipoSuscripcion;
+		this.descripcionTipoSuscripcion = descripcionTipoSuscripcion;
+		this.descuentoTipoSuscripcion = descuentoTipoSuscripcion;
+	}
 
-
-    public TipoSuscripcion(int idTipoSuscripcion, String nombreCategoria, String descripcionTipoSuscripcion, int descuentoTipoSuscripcion, String nombreTipoSuscripcion) {
-        this.idTipoSuscripcion = idTipoSuscripcion;
-        this.nombreTipoSuscripcion = nombreTipoSuscripcion;
-        this.descripcionTipoSuscripcion = descripcionTipoSuscripcion;
-        this.descuentoTipoSuscripcion = descuentoTipoSuscripcion;
-    }
+   
 }
-

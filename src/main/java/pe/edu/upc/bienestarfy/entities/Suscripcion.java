@@ -11,23 +11,21 @@ public class Suscripcion implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idSuscripcion;
 
-    @Column(name = "nombreSuscripcion", length = 36, nullable = false)
+    @Column(name = "nombreSuscripcion", length = 100, nullable = false)
     private String nombreSuscripcion;
 
     @Column(name = "precioSuscripcion", nullable = false)
     private int precioSuscripcion;
 
-
-    @Column(name = "fechaInicio", length = 36, nullable = false)
+    @Column(name = "fechaInicio", length = 100, nullable = false)
     private String fechaInicio;
 
-    @Column(name = "fechaFin", length = 36, nullable = false)
+    @Column(name = "fechaFin", length = 100, nullable = false)
     private String fechaFin;
 
     @ManyToOne
     @JoinColumn(name = "idTipoSuscripcion", nullable = false)
     private TipoSuscripcion tipoSuscripcion;
-
 
 	public Suscripcion() {
 

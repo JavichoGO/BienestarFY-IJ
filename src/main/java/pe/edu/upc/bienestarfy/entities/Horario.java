@@ -13,14 +13,12 @@ public class Horario implements Serializable{
     @Column(name = "nombreHorario", length = 100, nullable = false)
     private String nombreHorario;
 
-    @Column(name = "descripcionHorario", length = 100, nullable = false)
+    @Column(name = "descripcionHorario", length = 500, nullable = true)
     private String descripcionHorario;
     
     @Column(name = "fechaHorario", length = 100, nullable = false)
     private String fechaHorario;
     
-    @Column(name = "horaHorario", length = 100, nullable = false)
-    private String horaHorario;
 
     @ManyToOne
     @JoinColumn(name = "idUsuario", nullable = false)
@@ -35,13 +33,13 @@ public class Horario implements Serializable{
 	}
 
 	public Horario(int idHorario, String nombreHorario, String descripcionHorario, String fechaHorario,
-			String horaHorario, Usuario usuario, TipoHorario tipoHorario) {
+			 Usuario usuario, TipoHorario tipoHorario) {
 		super();
 		this.idHorario = idHorario;
 		this.nombreHorario = nombreHorario;
 		this.descripcionHorario = descripcionHorario;
 		this.fechaHorario = fechaHorario;
-		this.horaHorario = horaHorario;
+
 		this.usuario = usuario;
 		this.tipoHorario = tipoHorario;
 	}
@@ -78,13 +76,8 @@ public class Horario implements Serializable{
 		this.fechaHorario = fechaHorario;
 	}
 
-	public String getHoraHorario() {
-		return horaHorario;
-	}
 
-	public void setHoraHorario(String horaHorario) {
-		this.horaHorario = horaHorario;
-	}
+	
 
 	public Usuario getUsuario() {
 		return usuario;

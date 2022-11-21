@@ -1,4 +1,3 @@
-
 package pe.edu.upc.bienestarfy.serviceinterfaces;
 
 
@@ -15,6 +14,7 @@ public interface IRoleService {
 
     public Optional<Role> listarId(int idRole);
     List<Role>search(String nombreRole);
+
 
 
 

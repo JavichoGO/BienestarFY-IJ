@@ -14,9 +14,8 @@ public class Actividad implements Serializable {
     @Column(name = "nombreActividad", length = 100, nullable = false)
     private String nombreActividad;
 
-    @Column(name = "descripcionActividad", length = 100, nullable = false)
+    @Column(name = "descripcionActividad", length = 500, nullable = true)
     private String descripcionActividad;
-
 
     @Column(name = "duracionActividad", length = 100, nullable = false)
     private String duracionActividad;
@@ -27,7 +26,6 @@ public class Actividad implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "idTipoActividad", nullable = false)
-
     private TipoActividad tipoActividad;
 
  
@@ -120,4 +118,5 @@ public class Actividad implements Serializable {
 	private Actividad(){
 
     }
+
 }
