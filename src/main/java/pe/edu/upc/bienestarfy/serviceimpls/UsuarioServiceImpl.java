@@ -4,10 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
+import pe.edu.upc.bienestarfy.entities.RespuestaSuscripcion;
 import pe.edu.upc.bienestarfy.entities.Usuario;
 import pe.edu.upc.bienestarfy.repositories.IUsuarioRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.IUsuarioService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,6 +47,18 @@ public class UsuarioServiceImpl implements IUsuarioService {
     @Override
     public Optional<Usuario> listarId(int idUsuario) {
         return rU.findById(idUsuario);
+    }
+
+    @Override
+    public List<RespuestaSuscripcion> buscarCantidadUsuarios() {
+        List<RespuestaSuscripcion> lista=new ArrayList<>();
+        rU.buscarCantidadUsuarios().forEach(y->{
+            RespuestaSuscripcion c = new RespuestaSuscripcion();
+            c.setSuscripcion(y[0]);
+            c.setCantidad(y[1]);
+            lista.add(c);
+        });
+        return lista;
     }
 
 }

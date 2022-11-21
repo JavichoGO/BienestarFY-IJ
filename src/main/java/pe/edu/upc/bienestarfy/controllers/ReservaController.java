@@ -3,6 +3,7 @@ package pe.edu.upc.bienestarfy.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.bienestarfy.entities.Reserva;
+import pe.edu.upc.bienestarfy.entities.ReservaUsuario;
 import pe.edu.upc.bienestarfy.serviceinterfaces.IReservaService;
 
 import java.text.ParseException;
@@ -44,5 +45,9 @@ public class ReservaController {
     @GetMapping("/{id}")
     public Optional<Reserva> listarId(@PathVariable("id") Integer id) {
         return pService.listarId(id);
+    }
+    @GetMapping("/buscarRESUS")
+    public List<ReservaUsuario> buscarRESUS(){
+        return pService.buscarRESUS();
     }
 }

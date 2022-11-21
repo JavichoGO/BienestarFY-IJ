@@ -15,5 +15,6 @@ public interface IUsuarioRepository extends JpaRepository<Usuario,Integer> {
     @Query("from Usuario u where u.role.nombreRole like %:nombreRole%")
     List<Usuario> searchnombreRole(@Param("nombreRole") String nombreRole);
 
-
+    @Query(value="select s.nombre_suscripcion, count(u.id_usuario) from suscripcion s inner join usuario u on s.id_suscripcion = u.id_suscripcion group by s.nombre_suscripcion",nativeQuery = true)
+    List<String[]> buscarCantidadUsuarios();
 }

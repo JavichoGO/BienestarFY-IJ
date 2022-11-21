@@ -1,5 +1,6 @@
 package pe.edu.upc.bienestarfy.serviceinterfaces;
 
+import pe.edu.upc.bienestarfy.entities.RespuestaSuscripcion;
 import pe.edu.upc.bienestarfy.entities.Role;
 import pe.edu.upc.bienestarfy.entities.Usuario;
 
@@ -13,4 +14,5 @@ public interface IUsuarioService {
     List<Usuario>search(String nombreUsuario);
     List<Usuario>searchRole(String roleUsuario);
 
+    List<RespuestaSuscripcion> buscarCantidadUsuarios();
 }
