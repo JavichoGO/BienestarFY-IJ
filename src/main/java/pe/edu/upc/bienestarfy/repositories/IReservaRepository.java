@@ -13,4 +13,8 @@ public interface IReservaRepository extends JpaRepository<Reserva,Integer> {
     List<Reserva> buscarNombre(@Param("nombreReserva") String nombreReserva);
     @Query("FROM Reserva r WHERE r.usuario.nombreUsuario like %:nombreUsuario")
     List<Reserva> buscarnombreUsuario(@Param("nombreUsuario") String nombreUsuario);
+
+    @Query(value="select r.nombre_reserva,r.fecha_reserva,u.nombre_usuario,u.apellido_usuario,u.correo_usuario,u.telefono_usuario from reserva r left join usuario u on r.id_usuario = u.id_usuario",nativeQuery = true)
+    List<String[]> buscarRESUS();
+
 }

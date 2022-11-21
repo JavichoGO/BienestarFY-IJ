@@ -38,11 +38,15 @@ public class TipoSuscripcionController {
     @PostMapping("/buscar")
     public List<TipoSuscripcion> buscar(@RequestBody String nombreTipoSuscripcion) throws ParseException
     {        List<TipoSuscripcion> listaTipoSuscripciones;
-    listaTipoSuscripciones = tsService.search(nombreTipoSuscripcion);
+        listaTipoSuscripciones = tsService.search(nombreTipoSuscripcion);
         return listaTipoSuscripciones;
     }
     @GetMapping("/{id}")
     public Optional<TipoSuscripcion> listarId(@PathVariable("id") Integer id) {
         return tsService.listarId(id);
     }
+
+    @GetMapping("/buscarDescuento")
+    public List<TipoSuscripcion>buscarDescuento(){return tsService.buscarDescuento();}
+
 }
