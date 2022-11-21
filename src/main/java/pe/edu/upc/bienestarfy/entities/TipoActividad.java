@@ -11,7 +11,7 @@ public class TipoActividad {
     private int idTipoActividad;
     @Column(name = "nombreTipoActividad", length = 100, nullable = false)
     private String nombreTipoActividad;
-    @Column(name = "descripcionTipoActividad", length = 100, nullable = false)
+    @Column(name = "descripcionTipoActividad", length = 500, nullable = true)
     private  String descripcionTipoActividad;
 
     public TipoActividad(int idTipoActividad, String nombreTipoActividad, String descripcionTipoActividad) {

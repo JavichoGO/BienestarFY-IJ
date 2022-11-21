@@ -14,7 +14,7 @@ public class Actividad implements Serializable {
     @Column(name = "nombreActividad", length = 100, nullable = false)
     private String nombreActividad;
 
-    @Column(name = "descripcionActividad", length = 100, nullable = false)
+    @Column(name = "descripcionActividad", length = 500, nullable = true)
     private String descripcionActividad;
 
     @Column(name = "duracionActividad", length = 100, nullable = false)

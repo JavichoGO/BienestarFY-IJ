@@ -13,7 +13,7 @@ public class DetalleReserva implements Serializable {
 	    @Column(name = "nombreDetalleReserva", length = 100, nullable = false)
 	    private String nombreDetalleReserva;
 
-	    @Column(name = "descripcionDetalleReserva", length = 100, nullable = false)
+	    @Column(name = "descripcionDetalleReserva", length = 500, nullable = true)
 	    private String descripcionDetalleReserva;
 
 	    @ManyToOne
