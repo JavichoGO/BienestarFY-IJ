@@ -10,16 +10,16 @@ public class Usuario implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUsuario;
 
-    @Column(name = "nombreUsuario", length = 36, nullable = false)
+    @Column(name = "nombreUsuario", length = 100, nullable = false)
     private String nombreUsuario;
 
-    @Column(name = "apellidoUsuario", length = 36, nullable = false)
+    @Column(name = "apellidoUsuario", length = 100, nullable = false)
     private String apellidoUsuario;
 
-    @Column(name = "correoUsuario", length = 36, nullable = false)
+    @Column(name = "correoUsuario", length = 100, nullable = false)
     private String correoUsuario;
 
-    @Column(name = "contrasenaUsuario", length = 36, nullable = false)
+    @Column(name = "contrasenaUsuario", length = 100, nullable = false)
     private String contrasenaUsuario;
 
     @Column(name = "edadUsuario", nullable = false)

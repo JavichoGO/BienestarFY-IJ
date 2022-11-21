@@ -18,10 +18,10 @@ public class Reserva implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idReserva;
 
-    @Column(name = "nombreReserva", length = 36, nullable = false)
+    @Column(name = "nombreReserva", length = 100, nullable = false)
     private String nombreReserva;
     
-    @Column(name = "fechaReserva", length = 36, nullable = false)
+    @Column(name = "fechaReserva", length = 100, nullable = false)
     private String fechaReserva;
 
     @ManyToOne

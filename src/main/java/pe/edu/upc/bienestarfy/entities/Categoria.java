@@ -12,7 +12,7 @@ public class Categoria {
     @Column(name = "nombreCategoria",length = 100,nullable = false)
     private String nombreCategoria;
 
-    @Column(name = "descripcionCategoria",length = 100,nullable = true)
+    @Column(name = "descripcionCategoria",length = 500,nullable = true)
     private String descripcionCategoria;
 
     public Categoria() {
