@@ -40,6 +40,8 @@ public class HorarioServiceImpl implements IHorarioService{
     public List<Horario> search(String nombreHorario) {
         return hR.buscarNombre(nombreHorario);
     }
+    
+
     @Override
     public List<Horario> searchTipoHorario(String horTipo) {
         return hR.searchnombreTipoHorario(horTipo);
