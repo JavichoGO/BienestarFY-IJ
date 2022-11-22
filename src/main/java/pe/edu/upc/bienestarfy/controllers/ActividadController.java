@@ -52,5 +52,9 @@ public class ActividadController {
     public List<RespuestaUsuarios> buscarCantidadActividades(){
         return aService.buscarCantidadActividades();
     }
+    @GetMapping("/buscarDuracion")
+    public List<Actividad>buscarDuracion(){
+    	return aService.buscarDuracion();}
+
 
 }

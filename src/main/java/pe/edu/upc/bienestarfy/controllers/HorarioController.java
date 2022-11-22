@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.bienestarfy.entities.Actividad;
 import pe.edu.upc.bienestarfy.entities.Horario;
+import pe.edu.upc.bienestarfy.entities.RespuestaUsuarioHorario;
 import pe.edu.upc.bienestarfy.entities.Usuario;
 import pe.edu.upc.bienestarfy.serviceinterfaces.IActividadService;
 import pe.edu.upc.bienestarfy.serviceinterfaces.IHorarioService;
@@ -49,4 +50,8 @@ public class HorarioController {
 	        return hService.listarId(id);
 	    }
 
+		@GetMapping("/horariousuario")
+		public List<RespuestaUsuarioHorario> horariousuario(){
+		return hService.horariousuario();
 	}
+		}

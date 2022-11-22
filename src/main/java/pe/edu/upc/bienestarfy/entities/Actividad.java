@@ -17,8 +17,8 @@ public class Actividad implements Serializable {
     @Column(name = "descripcionActividad", length = 500, nullable = true)
     private String descripcionActividad;
 
-    @Column(name = "duracionActividad", length = 100, nullable = false)
-    private String duracionActividad;
+    @Column(name = "duracionActividad", nullable = false)
+    private Integer duracionActividad;
 
     @ManyToOne
     @JoinColumn(name = "idUsuario", nullable = false)
@@ -30,7 +30,7 @@ public class Actividad implements Serializable {
 
  
 
-    public Actividad(int idActividad, String nombreActividad, String descripcionActividad, String duracionActividad,
+    public Actividad(int idActividad, String nombreActividad, String descripcionActividad, Integer duracionActividad,
 			Usuario usuario, TipoActividad tipoActividad) {
 		super();
 		this.idActividad = idActividad;
@@ -79,13 +79,13 @@ public class Actividad implements Serializable {
 
 
 
-	public String getDuracionActividad() {
+	public Integer getDuracionActividad() {
 		return duracionActividad;
 	}
 
 
 
-	public void setDuracionActividad(String duracionActividad) {
+	public void setDuracionActividad(Integer duracionActividad) {
 		this.duracionActividad = duracionActividad;
 	}
 

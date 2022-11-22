@@ -1,5 +1,7 @@
 package pe.edu.upc.bienestarfy.serviceinterfaces;
+import pe.edu.upc.bienestarfy.entities.ReservaUsuario;
 import pe.edu.upc.bienestarfy.entities.Role;
+import pe.edu.upc.bienestarfy.entities.TADetalleReserva;
 import pe.edu.upc.bienestarfy.entities.TipoActividad;
 import pe.edu.upc.bienestarfy.entities.TipoSuscripcion;
 
@@ -12,4 +14,5 @@ public interface ITipoActividadService {
     public void delete(int idTipoActividad);
     public Optional<TipoActividad> listarId(int idTipoActividad);
     List<TipoActividad>search(String nombreTipoActividad);
+    List<TADetalleReserva> contadorTipoActividad();
 }
