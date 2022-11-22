@@ -15,5 +15,6 @@ public interface ISuscripcionRepository extends JpaRepository<Suscripcion,Intege
     @Query("from Suscripcion s where s.tipoSuscripcion.nombreTipoSuscripcion like %:nombreTipoSuscripcion%")
     List<Suscripcion> buscarnombreTipoSuscripcion(@Param("nombreTipoSuscripcion") String nombreTipoSuscripcion);
 
-
+    @Query(value ="select to_char(AVG(precio_suscripcion), 'FM999999990.00') from suscripcion ",nativeQuery = true)
+    List<String[]> PromedioPrecios();
 }

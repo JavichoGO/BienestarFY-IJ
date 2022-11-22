@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import pe.edu.upc.bienestarfy.entities.RespuestaSuscripcion;
+import pe.edu.upc.bienestarfy.entities.RespuestaUsuarioMenorEdad;
 import pe.edu.upc.bienestarfy.entities.Usuario;
 import pe.edu.upc.bienestarfy.repositories.IUsuarioRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.IUsuarioService;
@@ -56,6 +57,17 @@ public class UsuarioServiceImpl implements IUsuarioService {
             RespuestaSuscripcion c = new RespuestaSuscripcion();
             c.setSuscripcion(y[0]);
             c.setCantidad(y[1]);
+            lista.add(c);
+        });
+        return lista;
+    }
+    @Override
+    public List<RespuestaUsuarioMenorEdad> MenorEdadUsuario() {
+        List<RespuestaUsuarioMenorEdad> lista=new ArrayList<>();
+        rU.MenorEdadUsuario().forEach(y->{
+            RespuestaUsuarioMenorEdad c = new RespuestaUsuarioMenorEdad();
+            c.setEdad(y[0]);
+            c.setNombre(y[1]);
             lista.add(c);
         });
         return lista;

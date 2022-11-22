@@ -1,6 +1,7 @@
 package pe.edu.upc.bienestarfy.serviceinterfaces;
 
 import pe.edu.upc.bienestarfy.entities.TipoSuscripcion;
+import pe.edu.upc.bienestarfy.entities.RespuestaSuscripcionPromedio;
 import pe.edu.upc.bienestarfy.entities.Suscripcion;
 
 import java.util.List;
@@ -12,5 +13,5 @@ public interface ISuscripcionService {
     List<Suscripcion> list();
     List<Suscripcion>search(String nombreSuscripcion);
     List<Suscripcion>searchTipoSuscripcion(String roleSuscripcion);
-
+    List<RespuestaSuscripcionPromedio> PromedioPrecios();
 }
