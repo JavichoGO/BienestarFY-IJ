@@ -5,10 +5,13 @@ import org.springframework.stereotype.Service;
 
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
+
+import pe.edu.upc.bienestarfy.entities.RespuestaSuscripcionPromedio;
 import pe.edu.upc.bienestarfy.entities.Suscripcion;
 import pe.edu.upc.bienestarfy.repositories.ISuscripcionRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ISuscripcionService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -44,6 +47,16 @@ public class SuscripcionServiceImpl implements ISuscripcionService {
     @Override
     public Optional<Suscripcion> listarId(int idSuscripcion) {
         return rS.findById(idSuscripcion);
+    }
+    @Override
+    public List<RespuestaSuscripcionPromedio> PromedioPrecios() {
+        List<RespuestaSuscripcionPromedio> lista=new ArrayList<>();
+        rS.PromedioPrecios().forEach(y->{
+            RespuestaSuscripcionPromedio c = new RespuestaSuscripcionPromedio();
+            c.setPromedio(y[0]);
+            lista.add(c);
+        });
+        return lista;
     }
 
 }

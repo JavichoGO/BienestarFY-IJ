@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import pe.edu.upc.bienestarfy.entities.RespuestaSuscripcion;
+import pe.edu.upc.bienestarfy.entities.RespuestaUsuarioMenorEdad;
 import pe.edu.upc.bienestarfy.entities.Usuario;
 import pe.edu.upc.bienestarfy.serviceinterfaces.IUsuarioService;
 
@@ -56,4 +57,7 @@ public class UsuarioController {
     public List<RespuestaSuscripcion> buscarCantidadUsuarios(){
         return pService.buscarCantidadUsuarios();
     }
+    @GetMapping("/MenorEdadUsuario")
+    public List<RespuestaUsuarioMenorEdad>MenorEdadUsuario(){return pService.MenorEdadUsuario();}
+
 }

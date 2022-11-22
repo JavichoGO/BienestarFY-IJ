@@ -17,4 +17,7 @@ public interface IUsuarioRepository extends JpaRepository<Usuario,Integer> {
 
     @Query(value="select s.nombre_suscripcion, count(u.id_usuario) from suscripcion s inner join usuario u on s.id_suscripcion = u.id_suscripcion group by s.nombre_suscripcion",nativeQuery = true)
     List<String[]> buscarCantidadUsuarios();
+   
+    @Query(value="select u.edad_usuario, u.nombre_usuario from usuario u where u.edad_usuario = (select MIN(edad_usuario) from usuario)",nativeQuery = true)
+    List<String[]> MenorEdadUsuario();
 }
