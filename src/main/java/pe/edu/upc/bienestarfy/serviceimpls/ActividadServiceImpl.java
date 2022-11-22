@@ -42,6 +42,12 @@ public class ActividadServiceImpl implements IActividadService {
     public List<Actividad> searchTipoActividad(String actTipo) {
         return rA.searchnombreTipoActividad(actTipo);
     }
+
+    @Override
+    public List<Actividad> buscarDuracion() {
+        return  rA.buscarDuracion();
+    }
+
     @Override
     public Optional<Actividad> listarId(int idActividad) {
         return rA.findById(idActividad);

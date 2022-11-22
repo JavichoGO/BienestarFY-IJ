@@ -16,4 +16,6 @@ public interface IActividadService {
 
     List<Actividad>searchTipoActividad(String actTipo);
 
+    List<Actividad> buscarDuracion();
+
 }
