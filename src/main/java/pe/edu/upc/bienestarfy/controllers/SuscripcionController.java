@@ -2,6 +2,7 @@ package pe.edu.upc.bienestarfy.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.bienestarfy.entities.RespuestaSuscripcionPromedio;
 import pe.edu.upc.bienestarfy.entities.Suscripcion;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ISuscripcionService;
 
@@ -48,4 +49,6 @@ public class SuscripcionController {
     public Optional<Suscripcion> listarId(@PathVariable("id") Integer id) {
         return sService.listarId(id);
     }
+    @GetMapping("/PromedioPrecios")
+    public List<RespuestaSuscripcionPromedio>PromedioPrecios(){return sService.PromedioPrecios();}
 }
