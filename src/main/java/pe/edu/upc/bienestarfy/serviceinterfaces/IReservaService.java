@@ -2,6 +2,7 @@ package pe.edu.upc.bienestarfy.serviceinterfaces;
 
 import pe.edu.upc.bienestarfy.entities.Actividad;
 import pe.edu.upc.bienestarfy.entities.Reserva;
+import pe.edu.upc.bienestarfy.entities.ReservaUsuario;
 
 import java.util.Date;
 import java.util.List;
@@ -14,4 +15,5 @@ public interface IReservaService {
     List<Reserva> list();
     List<Reserva>search(String nombreReserva);
     List<Reserva>searchUsuario(String reservaUsuario);
+    List<ReservaUsuario> buscarRESUS();
 }

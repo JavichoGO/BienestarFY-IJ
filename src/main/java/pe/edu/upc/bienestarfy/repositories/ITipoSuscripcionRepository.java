@@ -14,4 +14,7 @@ public interface ITipoSuscripcionRepository extends JpaRepository<TipoSuscripcio
     //JPQL
     @Query("FROM TipoSuscripcion p " + "WHERE p.nombreTipoSuscripcion like %:nombreTipoSuscripcion%")
     List<TipoSuscripcion> buscarNombre(@Param("nombreTipoSuscripcion") String nombreTipoSuscripcion);
+
+    @Query(value ="select * from tipo_suscripcion ts where ts.descuento_tipo_suscripcion = (select MAX(descuento_tipo_suscripcion) from tipo_suscripcion)",nativeQuery = true)
+    List<TipoSuscripcion> buscarDescuento();
 }

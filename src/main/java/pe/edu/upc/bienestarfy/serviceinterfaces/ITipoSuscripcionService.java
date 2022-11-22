@@ -12,6 +12,6 @@ public interface ITipoSuscripcionService {
     public void delete(int idTipoSuscripcion);
     public Optional<TipoSuscripcion> listarId(int idTipoSuscripcion);
     List<TipoSuscripcion>search(String nombreTipoSuscripcion);
-    
-    
+
+    List<TipoSuscripcion> buscarDescuento();
 }

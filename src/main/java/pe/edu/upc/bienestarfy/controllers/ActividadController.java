@@ -3,6 +3,7 @@ package pe.edu.upc.bienestarfy.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.bienestarfy.entities.Actividad;
+import pe.edu.upc.bienestarfy.entities.RespuestaUsuarios;
 import pe.edu.upc.bienestarfy.entities.Usuario;
 import pe.edu.upc.bienestarfy.serviceinterfaces.IActividadService;
 import pe.edu.upc.bienestarfy.serviceinterfaces.IUsuarioService;
@@ -46,5 +47,14 @@ public class ActividadController {
     public Optional<Actividad> listarId(@PathVariable("id") Integer id) {
         return aService.listarId(id);
     }
+    
+    @GetMapping("/cantidadactividad")
+    public List<RespuestaUsuarios> buscarCantidadActividades(){
+        return aService.buscarCantidadActividades();
+    }
+    @GetMapping("/buscarDuracion")
+    public List<Actividad>buscarDuracion(){
+    	return aService.buscarDuracion();}
+
 
 }

@@ -29,8 +29,13 @@ public class TipoSuscripcionServiceImpl implements ITipoSuscripcionService {
         return tsR.buscarNombre(nombreTipoSuscripcion);
     }
 
-	@Override
-	public Optional<TipoSuscripcion> listarId(int idTipoSuscripcion) {
-		return tsR.findById(idTipoSuscripcion);
-	}
+    @Override
+    public List<TipoSuscripcion> buscarDescuento() {
+        return tsR.buscarDescuento();
+    }
+
+    @Override
+    public Optional<TipoSuscripcion> listarId(int idTipoSuscripcion) {
+        return tsR.findById(idTipoSuscripcion);
+    }
 }

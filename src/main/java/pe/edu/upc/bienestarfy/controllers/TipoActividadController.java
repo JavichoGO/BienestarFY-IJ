@@ -2,7 +2,10 @@ package pe.edu.upc.bienestarfy.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import pe.edu.upc.bienestarfy.entities.ReservaUsuario;
 import pe.edu.upc.bienestarfy.entities.Role;
+import pe.edu.upc.bienestarfy.entities.TADetalleReserva;
 import pe.edu.upc.bienestarfy.entities.TipoActividad;
 import pe.edu.upc.bienestarfy.entities.TipoSuscripcion;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ITipoActividadService;
@@ -44,4 +47,9 @@ public class TipoActividadController {
     public Optional<TipoActividad> listarId(@PathVariable("id") Integer id) {
         return pService.listarId(id);
     }
+    @GetMapping("/contadorTipoActividad")
+    public List<TADetalleReserva> contadorTipoActividad(){
+        return pService.contadorTipoActividad();
+    }
+    
 }

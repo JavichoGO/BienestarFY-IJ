@@ -17,4 +17,11 @@ public interface IActividadRepository extends JpaRepository<Actividad, Integer> 
 
     @Query("from Actividad a where a.tipoActividad.nombreTipoActividad like %:nombreTipoActividad%")
     List<Actividad> searchnombreTipoActividad(@Param("nombreTipoActividad") String nombreTipoActividad);
+
+    @Query(value="select u.nombre_usuario, count(a.id_actividad)from usuario u inner join actividad a on u.id_usuario = a.id_usuario group by u.id_usuario",nativeQuery = true)
+    List<String[]>buscarCantidadActividades();
+    
+    @Query(value ="select * from actividad act where act.duracion_actividad = (select MAX(duracion_actividad) from actividad)",nativeQuery = true)
+    List<Actividad> buscarDuracion();
+
 }

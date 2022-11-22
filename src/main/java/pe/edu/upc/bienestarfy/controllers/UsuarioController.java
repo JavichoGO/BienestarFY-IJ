@@ -2,6 +2,8 @@ package pe.edu.upc.bienestarfy.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import pe.edu.upc.bienestarfy.entities.RespuestaSuscripcion;
 import pe.edu.upc.bienestarfy.entities.Usuario;
 import pe.edu.upc.bienestarfy.serviceinterfaces.IUsuarioService;
 
@@ -49,5 +51,9 @@ public class UsuarioController {
     @GetMapping("/{id}")
     public Optional<Usuario> listarId(@PathVariable("id") Integer id) {
         return pService.listarId(id);
+    }
+    @GetMapping("/cantidadusuario")
+    public List<RespuestaSuscripcion> buscarCantidadUsuarios(){
+        return pService.buscarCantidadUsuarios();
     }
 }

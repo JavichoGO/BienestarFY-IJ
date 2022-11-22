@@ -4,9 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import pe.edu.upc.bienestarfy.entities.Actividad;
+import pe.edu.upc.bienestarfy.entities.RespuestaUsuarios;
 import pe.edu.upc.bienestarfy.repositories.IActividadRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.IActividadService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,5 +47,20 @@ public class ActividadServiceImpl implements IActividadService {
     @Override
     public Optional<Actividad> listarId(int idActividad) {
         return rA.findById(idActividad);
+    }
+    @Override
+    public List<RespuestaUsuarios> buscarCantidadActividades() {
+        List<RespuestaUsuarios> lista=new ArrayList<>();
+        rA.buscarCantidadActividades().forEach(y->{
+            RespuestaUsuarios c = new RespuestaUsuarios();
+            c.setUsuario(y[0]);
+            c.setCantidad(y[1]);
+            lista.add(c);
+        });
+        return lista;
+    }
+    @Override
+    public List<Actividad> buscarDuracion() {
+        return  rA.buscarDuracion();
     }
 }

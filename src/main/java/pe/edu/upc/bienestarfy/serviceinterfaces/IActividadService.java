@@ -1,6 +1,7 @@
 package pe.edu.upc.bienestarfy.serviceinterfaces;
 
 import pe.edu.upc.bienestarfy.entities.Actividad;
+import pe.edu.upc.bienestarfy.entities.RespuestaUsuarios;
 import pe.edu.upc.bienestarfy.entities.Usuario;
 
 import java.util.List;
@@ -16,4 +17,7 @@ public interface IActividadService {
 
     List<Actividad>searchTipoActividad(String actTipo);
 
+    List<RespuestaUsuarios> buscarCantidadActividades();
+    
+    List<Actividad> buscarDuracion();
 }
