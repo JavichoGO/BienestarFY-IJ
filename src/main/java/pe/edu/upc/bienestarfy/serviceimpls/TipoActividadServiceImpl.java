@@ -4,9 +4,13 @@ import pe.edu.upc.bienestarfy.repositories.ITipoActividadRepository;
 import pe.edu.upc.bienestarfy.serviceinterfaces.ITipoActividadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import pe.edu.upc.bienestarfy.entities.ReservaUsuario;
+import pe.edu.upc.bienestarfy.entities.TADetalleReserva;
 import pe.edu.upc.bienestarfy.entities.TipoActividad;
 import pe.edu.upc.bienestarfy.entities.TipoSuscripcion;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,6 +36,21 @@ public class TipoActividadServiceImpl implements ITipoActividadService {
 	public Optional<TipoActividad> listarId(int idTipoActividad) {
 		return taS.findById(idTipoActividad);
 	}
+    @Override
+    public List<TADetalleReserva> contadorTipoActividad() {
+        List<TADetalleReserva> lista=new ArrayList<>();
+        taS.contadorTipoActividad().forEach(
+                y->{
+                	TADetalleReserva r= new TADetalleReserva();
+                    r.setTipoActividad(y[0]);
+                    r.setCantidad(Integer.valueOf(y[1]));
+                    lista.add(r);
+                }
+        );
+        return lista;
+    }
+
+   
 
 }
 

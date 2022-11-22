@@ -18,4 +18,6 @@ public interface IActividadService {
     List<Actividad>searchTipoActividad(String actTipo);
 
     List<RespuestaUsuarios> buscarCantidadActividades();
+    
+    List<Actividad> buscarDuracion();
 }

@@ -59,4 +59,8 @@ public class ActividadServiceImpl implements IActividadService {
         });
         return lista;
     }
+    @Override
+    public List<Actividad> buscarDuracion() {
+        return  rA.buscarDuracion();
+    }
 }
